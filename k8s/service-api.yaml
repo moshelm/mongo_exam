@@ -7,7 +7,6 @@ spec:
   - name: api
     port: 8000
     targetPort: 8000
-    nodePort: 30381
   selector:
     name: api
-  type: NodePort
+  type: ClusterIP

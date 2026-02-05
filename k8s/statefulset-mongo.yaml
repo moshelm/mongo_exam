@@ -5,14 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mongodb 
+      app: mongo
   serviceName: "mongo-service"
   replicas: 1
   # minReadySeconds: 10 
   template:
     metadata:
       labels:
-        app: mongodb
+        app: mongo
     spec:
       # terminationGracePeriodSeconds: 10
       containers:
