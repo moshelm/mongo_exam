@@ -38,7 +38,7 @@ def get_managers_excluding_departments():
     return res
 
 def get_employees_by_lastname_and_age():
-    projection = {'name':1,"age":1,"jon=b_role.department":1}
+    projection = {'name':1,"age":1,"job_role.department":1}
     query = {"$and":[{'age':{"$lt":35}},{"$or":[{'name':{"$regex":"Wright"}},{"name":{"$regex":"Nelson"}}]}]}
     res = list(manager.collection.find(query, projection))
     convert_objectId(res)
