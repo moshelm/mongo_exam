@@ -18,7 +18,7 @@ class MongoManger():
         self.db = self.client[MONGO_DATABASE]
         self.collection = self.db[MONGO_COLLECTION]
 
-        
+
     def init_data(self):
         with open("./employee_data_advanced.json",'r') as file:
             data = file.read()

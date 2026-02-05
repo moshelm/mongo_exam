@@ -1,6 +1,6 @@
 from fastapi import HTTPException, APIRouter
-from connection import manager
-from dal import * 
+from .connection import manager
+from .dal import * 
 
 router = APIRouter()
 manager.init_data()

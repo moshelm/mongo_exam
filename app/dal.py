@@ -1,4 +1,4 @@
-from connection import manager
+from .connection import manager
 
 
 
