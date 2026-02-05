@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: moshe5434/api-mongo-exam:v1
+        ports:
+        - containerPort: 800
+        env:
+         - name: MONGO_HOST
+           value: "mongo-service"
+         - name: MONGO_PORT
+           value: "27017"
+         - name: MONGO_DATABASE
+           value: "test_db"
+         - name: MONGO_COLLECTION
+           value: "test_collection"
