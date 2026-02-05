@@ -8,5 +8,5 @@ spec:
     port: 8000
     targetPort: 8000
   selector:
-    name: api
+    app: api
   type: ClusterIP
